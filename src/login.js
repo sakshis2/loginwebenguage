@@ -72,7 +72,6 @@ export default function Loginpage() {
                   <div className="flex items-center justify-between">
                     <div className="text-sm ml-auto">
                       <a
-                        href="#"
                         className="text-purple-700 hover:text-purple-600"
                       >
                         Forgot your password?
