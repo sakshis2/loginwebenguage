@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import validator from "validator";
-import Home from "./Home";
- 
+import Home from "./Components/Home";
+
 
 
 export default function Loginpage() {
   const [handleEmail, sethandleEmail] = useState("");
   const [firstname, setfirstName] = useState("");
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
   //const history = useHistory()
-
+  //webengage.user.login('9SBOkLVMWvPX');
+  
   const handleSubmit = () => {
     // history.push("/dashboard");
+
     if (validate(handleEmail)) {
-      
-      // setLogin(true);
+      console.log(handleEmail);
+      console.log(firstname);
+
+      setLogin(true);
     }
   };
+  
 
   const validate = (Email) => {
     //const r = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
@@ -52,7 +57,7 @@ export default function Loginpage() {
                 <div className="space-y-6">
                   <div className="">
                     <input
-                      className=" w-full text-sm  px-4 py-3 bg-gray-200 focus:bg-gray-100 border  border-gray-200 rounded-lg focus:outline-none focus:border-purple-400"
+                      className=" w-full text-sm text-black px-4 py-3 bg-gray-200 focus:bg-gray-100 border  border-gray-200 rounded-lg focus:outline-none focus:border-purple-400"
                       type=""
                       placeholder="Email"
                       value={handleEmail}
@@ -65,7 +70,7 @@ export default function Loginpage() {
                       placeholder="First Name"
                       value={firstname}
                       onChange={(e) => setfirstName(e.target.value)}
-                      className="text-sm  px-4 py-3 rounded-lg w-full bg-gray-200 focus:bg-gray-100 border border-gray-200 focus:outline-none focus:border-purple-400"
+                      className="text-sm text-black px-4 py-3 rounded-lg w-full bg-gray-200 focus:bg-gray-100 border border-gray-200 focus:outline-none focus:border-purple-400"
                     />
                   </div>
 
