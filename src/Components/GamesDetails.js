@@ -47,7 +47,7 @@ export default function GamesDetails() {
                 <h5 className=" text-1xl font-serif ">{e.short_description}</h5>
               </div>
             </div>
-            <p>description: {e.description}</p>
+            <p className="shadow-xl py-16">description: {e.description}</p>
             <p>genre: {e.genre}</p>
           </div>
         );
