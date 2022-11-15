@@ -11,7 +11,7 @@ export default function Loginpage() {
   const handleSubmit = () => {
     if (validate(handleEmail)) {
       setLogin(true);
-      this.webengage.user.login('9SBOkLVMWvPX');
+      window.webengage.user.login('9SBOkLVMWvPX');
       navigate("/home");
     }
   };
