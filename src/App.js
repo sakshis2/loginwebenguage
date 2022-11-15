@@ -1,13 +1,20 @@
-import './App.css';
-import Loginpage from './login';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GamesDetails from "./Components/GamesDetails";
+import Home from "./Components/Home";
+import Loginpage from "./login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Loginpage/>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/home" element={<Home />} /> */}
+        {/* <Route path="/" element={<GamesDetails />} /> */}
+        <Route path="/game-details" element={<GamesDetails />} />
+        {/* <Route path="/" element={<Loginpage />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

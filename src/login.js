@@ -2,18 +2,12 @@ import React, { useState } from "react";
 import validator from "validator";
 import Home from "./Components/Home";
 
-
-
 export default function Loginpage() {
   const [handleEmail, sethandleEmail] = useState("");
   const [firstname, setfirstName] = useState("");
   const [login, setLogin] = useState(true);
-  //const history = useHistory()
-  //webengage.user.login('9SBOkLVMWvPX');
-  
-  const handleSubmit = () => {
-    // history.push("/dashboard");
 
+  const handleSubmit = () => {
     if (validate(handleEmail)) {
       console.log(handleEmail);
       console.log(firstname);
@@ -21,10 +15,8 @@ export default function Loginpage() {
       setLogin(true);
     }
   };
-  
 
   const validate = (Email) => {
-    //const r = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
     if (validator.isEmail(Email)) {
       return true;
     }
@@ -76,9 +68,7 @@ export default function Loginpage() {
 
                   <div className="flex items-center justify-between">
                     <div className="text-sm ml-auto">
-                      <a
-                        className="text-purple-700 hover:text-purple-600"
-                      >
+                      <a className="text-purple-700 hover:text-purple-600">
                         Forgot your password?
                       </a>
                     </div>
