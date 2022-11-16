@@ -12,7 +12,6 @@ export default function Loginpage() {
     if (validate(handleEmail)) {
       setLogin(true);
       window.webengage.user.login(handleEmail);
-      console.log(window.webengage.user.login(handleEmail))
       navigate("/home");
     }
   };
