@@ -28,6 +28,11 @@ export default function GamesDetails() {
         console.error(error);
       });
   }, []);
+  let decNum =(e) => {
+    window.webengage.track("setCart", {"Name":e.title});
+
+  }
+    
   return (
     <div className="bg-purple-400 w-full p-4 min-h-screen h-full">
       {gameData.map((e) => {
@@ -41,8 +46,8 @@ export default function GamesDetails() {
                   {cart}
                   
                 </p>
-                  <button onClick={()=> {setCart(window.webengage.track("cart", [1]));}}>add cart</button>
-                 
+                  <button onClick={()=> {setCart(cart + 1);}}>add cart</button>
+                  <button onClick={()=>decNum(e)}>event</button>                
               </div>
               <div>
                 <h1 className=" text-5xl font-serif mb-8">{e.title}</h1>
