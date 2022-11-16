@@ -6,6 +6,7 @@ export default function GamesDetails() {
   const location = useLocation();
   const { key } = location.state;
   const [gameData, setgameData] = useState([]);
+  let [cart, setCart] = useState(0)
 
   useEffect(() => {
     const options = {
@@ -35,6 +36,11 @@ export default function GamesDetails() {
             <div className="flex gap-5 mb-8">
               <div>
                 <img className="rounded-md" src={e.thumbnail} alt="" />
+                <h6>cart value</h6>
+                <p>
+                  {cart}
+                </p>
+                  <button onClick={()=> {setCart(cart + 1);}}>add cart</button>
               </div>
               <div>
                 <h1 className=" text-5xl font-serif mb-8">{e.title}</h1>
