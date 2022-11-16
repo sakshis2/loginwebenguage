@@ -42,7 +42,7 @@ export default function GamesDetails() {
                   
                 </p>
                   <button onClick={()=> {setCart(cart + 1);}}>add cart</button>
-                  window.webengage.track(cart,[1]);
+                  webengage.track(setCart, [eventData]);
               </div>
               <div>
                 <h1 className=" text-5xl font-serif mb-8">{e.title}</h1>
