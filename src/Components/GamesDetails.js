@@ -39,7 +39,7 @@ export default function GamesDetails() {
                 <h6>cart value</h6>
                 <p>
                   {cart}
-                  window.webengage.track(setCart, [eventData]);
+                  {/* window.webengage.track(setCart, [eventData]); */}
                 </p>
                   <button onClick={()=> {setCart(cart + 1);}}>add cart</button>
                  
